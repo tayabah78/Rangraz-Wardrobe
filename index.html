@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rangreez Wardrobe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: url('https://i.imgur.com/ewYcxKX.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero-content a {
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+    .about img {
+      flex: 1 1 40%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .about .text {
+      flex: 1 1 50%;
+    }
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonials {
+      text-align: center;
+    }
+    .testimonial {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .newsletter {
+      background: #ffe;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      max-width: 300px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background: #ffd700;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    footer h4 {
+      margin-bottom: 15px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <img src="https://i.imgur.com/eqYTrcK.png" alt="Rangreez Logo" width="120"><br><br>
+      <h1>Welcome to Rangreez Wardrobe</h1>
+      <p>Coloring Traditions, Weaving Elegance</p>
+      <a href="#collections">Shop Now</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <img src="https://i.imgur.com/GuvsHPA.jpg" alt="About Rangreez">
+    <div class="text">
+      <h2>About Us</h2>
+      <p>At Rangreez Wardrobe, we celebrate cultural roots with modern style. Every piece in our collection is handpicked, inspired by timeless designs and contemporary comfort. We blend colors, fabric, and tradition into wearable art.</p>
+    </div>
+  </section>
+
+  <section id="collections">
+    <h2 style="text-align:center; margin-bottom: 30px;">Our Collections</h2>
+    <div class="collections">
+      <div class="card">
+        <h3>Women's Wear</h3>
+        <p>Elegant kurtas, dupattas, and embroidered sets designed to express tradition with grace.</p>
+      </div>
+      <div class="card">
+        <h3>Men's Wear</h3>
+        <p>Classic kurta-pajamas and Nehru jackets, blending tradition with comfort.</p>
+      </div>
+      <div class="card">
+        <h3>Kids' Wear</h3>
+        <p>Festive outfits for young ones — playful, bright, and celebration-ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"Absolutely loved the fabric quality and fit. The embroidery is stunning!"</p>
+      <p><strong>- Ayesha K.</strong></p>
+    </div>
+    <div class="testimonial">
+      <p>"Perfect for Eid and weddings. Rangreez is now my go-to brand!"</p>
+      <p><strong>- Rahim S.</strong></p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe for the latest arrivals, deals, and festive collections.</p>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <div>
+      <h4>Rangreez Wardrobe</h4>
+      <p>Bringing colors to life through fabric and thread.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#">Contact</a>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </footer>
+</body>
+</html>
